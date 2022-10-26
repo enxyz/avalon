@@ -2,6 +2,9 @@
 set -e
 set -u
 
+# realpath not on macos
+source $(dirname "$0")/utils/realpath.sh
+
 export GODOT_THREADS='0'
 export XDG_DATA_HOME='/tmp/xdg-godot'
 
